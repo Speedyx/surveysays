@@ -18,7 +18,7 @@
   <%= f.fields_for :questions do |builder| %>
     <p>
       <%= builder.label :content, "Question" %><br />
-      <%= builder.text_area :content, :rows => 3 %>
+      <%= render 'question_form', :f => builder %>
     </p>
   <% end %>
   <div class="actions">
