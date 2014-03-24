@@ -16,12 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <%= f.fields_for :questions do |builder| %>
-    <p>
-      <%= builder.label :content, "Question" %><br />
-      <%= render 'question_form', :f => builder %>
-    </p>
+    <%= render 'question_fields', :f => builder %>
   <% end %>
+  <p><%= link_to_add_fields "Add Question", f, :questions %></p>
   <div class="actions">
-    <%= f.submit "Submit" %>
+    <p><%= f.submit "Submit" %></p>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 Surveysays::Application.routes.draw do
+  get "home/index"
+  root :to => "home#index"
   resources :participants
-
   resources :surveys
 
   # The priority is based upon order of creation: first created -> highest priority.
